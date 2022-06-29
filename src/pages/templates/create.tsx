@@ -76,7 +76,7 @@ export default function CreateTemplate() {
       },
       onError: (error: AxiosError) => {
         toast({
-          title: error?.response?.data?.error || 'Houve um erro ao criar o template',
+          title: error?.response?.data || 'Houve um erro ao criar o template',
           status: 'error',
           position: 'top',
           duration: 3000

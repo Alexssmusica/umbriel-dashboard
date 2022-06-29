@@ -6,12 +6,12 @@ import {
   InputProps as ChakraInputProps
 } from '@chakra-ui/react';
 import { forwardRef } from 'react';
-import { FieldError } from 'react-hook-form';
+import { ErrorOption } from 'react-hook-form';
 
 interface InputProps extends ChakraInputProps {
   name: string;
   label?: string;
-  error?: FieldError;
+  error?: ErrorOption;
 }
 
 export function InputComponent({ name, label, error = null, ...rest }: InputProps, ref) {

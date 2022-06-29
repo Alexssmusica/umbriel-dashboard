@@ -162,7 +162,7 @@ export default function CreateMessage() {
       },
       onError: (error: AxiosError) => {
         toast({
-          title: error?.response?.data?.error || 'Houve um erro ao cadastrar a mensagem',
+          title: error?.response?.data|| 'Houve um erro ao cadastrar a mensagem',
           status: 'error',
           position: 'top',
           duration: 3000

@@ -1,17 +1,22 @@
-import { Button as ChakraButton, ButtonProps as ChakraButtonProps } from '@chakra-ui/react';
+import { Button as ChakraButton, ButtonProps as ChakraButtonProps, forwardRef } from '@chakra-ui/react';
+import React from 'react';
 
 type ButtonProps = ChakraButtonProps
 
-export function Button({ children, ...rest }: ButtonProps) {
+export const Button = forwardRef<ButtonProps, 'button'>(({ children, ...rest }, ref) => {
   return (
     <ChakraButton 
       color="white" 
       fontSize="md"
-      size="lg" 
+      size="lg"
+      ref={ref}
       colorScheme="purple"
       {...rest}
     >
       {children}
     </ChakraButton>
   );
-}
+})
+
+
+

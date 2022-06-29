@@ -81,11 +81,12 @@ export default function Subscribers() {
                   <Icon as={RiSearch2Line} fontSize="16" />
                 </Button>
               </Flex>
-              <Link href="/subscribers/create">
+              <Link href="/subscribers/create" passHref>
                 <Button
                   size="lg"
                   fontSize="xl"
                   colorScheme="purple"
+                  as="a"	
                   ml="2"
                   maxW={59}
                 >

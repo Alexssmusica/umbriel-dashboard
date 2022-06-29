@@ -4,7 +4,7 @@ import { RiSaveLine } from 'react-icons/ri'
 
 import { Header } from '../../components/Header'
 import { Sidebar } from '../../components/Sidebar'
-import { Button } from '../../components/Button'
+import  { Button }  from '../../components/Button'
 import { Input } from '../../components/Form/Input'
 import { withSSRAuth } from '../../utils/withSSRAuth'
 import { api } from '../../services/apiClient'
@@ -60,7 +60,7 @@ export default function CreateContact() {
       },
       onError: (error: AxiosError) => {
         toast({
-          title: error?.response?.data?.error || 'Houve um erro ao criar o contato',
+          title: error?.response?.data || 'Houve um erro ao criar o contato',
           status: 'error',
           position: 'top',
           duration: 3000
@@ -84,7 +84,7 @@ export default function CreateContact() {
   return (
     <Box>
       <Head>
-        <title>Criar contato | Umbriel</title>
+        <title>Criar Inscrito | Umbriel</title>
       </Head>
 
       <Header />
@@ -108,7 +108,7 @@ export default function CreateContact() {
             </Box>
 
             <HStack>
-              <Link href="/contacts">
+              <Link href="/subscribers" passHref>
                 <Button size="md" colorScheme="blackAlpha">
                   Cancelar
                 </Button>
